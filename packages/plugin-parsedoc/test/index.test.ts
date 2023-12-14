@@ -12,7 +12,7 @@ t.test('it should store the values', async (t) => {
   await populateFromGlob(db, filepath)
   t.strictSame(
     (await search(db, { term: 'Test' })).hits.map(({ document }) => document),
-    [{ path: `${filepath}/root[1].html[0].head[1]`, content: 'Test', type: 'title', properties: {} }]
+    [{ path: `${filepath}/root[1].html[0].head[1]`, content: 'Testsssssxf', type: 'title', properties: {} }]
   )
 })
 
@@ -26,7 +26,7 @@ t.test('when there are multiple consecutive elements with text with the same tag
   await t.test('it should keep records separated when the strategy is split', async (t) => {
     const db = await create({ schema })
     await populateFromGlob(db, 'test/fixtures/two-paragraphs.html', { mergeStrategy: 'split' })
-    t.equal(getDocs(db).length, 2)
+    t.equal(getDocs(db).length, 23)
   })
 
   await t.test('it should keep separated and merged records when the strategy is both', async (t) => {
