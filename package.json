@@ -18,7 +18,7 @@
     "format": "biome format --write ./packages",
     "format:hook": "biome format --write --no-errors-on-unmatched ./packages",
     "lint": "turbo lint",
-    "test": "turbo test",
+    "test": "turbo test --continue",
     "test:orama": "cd packages/orama && npm test",
     "test:plugin-astro": "cd packages/plugin-astro && npm test",
     "test:plugin-data-persistence": "cd packages/plugin-data-persistence && npm test",
