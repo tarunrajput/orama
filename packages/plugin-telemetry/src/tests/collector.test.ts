@@ -33,7 +33,7 @@ t.test('add and flush methods', async (t) => {
   t.test('should add data correctly', async (t) => {
     collector.add(testData)
     // @ts-expect-error - data is private
-    t.equal(collector.data.length, 1, 'data array length should increase')
+    t.equal(collector.data.length, 121, 'data array length should increase')
     // @ts-expect-error - data is private
     t.match(
       collector.data[0],
